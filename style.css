@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background-color: #728b90;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+header .logo img{
+    height: 70px;
+    width: 70px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* background-color: #333; Add a background color for visibility */
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Needed for positioning the dropdown */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #728b90;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1em;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.hero h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+.btn {
+   
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.about, .products, .contact {
+    padding: 50px 20px;
+}
+
+.about {
+    text-align: left;
+}
+.about h2{
+    font-size: 30px;
+}
+.about p{
+    font-size: 18px;
+}
+.products{
+    /* background-color: #efb256;*/
+    background-color: #f4f4f4;
+    }
+.products .box{
+    margin-top: 70px;
+    margin-left: 500px;
+}
+.products h2{
+    text-align: left;
+    font-size:30px ;
+    color: #181616;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.card p {
+    padding: 0 15px 15px;
+}
+footer {
+    background: #f4f4f4;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}
+footer h2{
+    font-weight: 900;
+    color: #181616;
+    font-family: "Noto Sans", sans-serif;
+    /* font-size: 900px; */
+}
+/* .contactus {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(2,300px);
+    /* gap: 10px; Optional: adds space between grid items 
+   
+    margin-top: 40px;
+    margin-left: 300px;
+}
+
+.contactus .img, .contactus .text {
+    background-color: #f0f0f0; Optional: for better visibility
+    padding: 10px;
+    text-align: center;
+}
+
+.contactus .img img {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+ }  */
+ .contactus {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 1fr ensures columns take equal space */
+    grid-gap: 20px; /* Adds space between grid items */
+    padding: 20px;
+    margin: 0 auto; /* Centers the grid container */
+    max-width: 1000px; /* Ensures the container does not exceed a certain width */
+}
+
+ .contactus .text {
+    padding: 10px;
+    text-align: center;
+    background-color: #7f9fa4; /* Ensure both have the same background for consistency */
+}
+
+.contactus .img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+}
+
+footer p{
+    color: black;
+    font-family: "Noto-Sans",sans-serif;
+}
+/* .text{
+    margin-top: 90px;
+    color: black;
+    background-color: #daf1f5;
+    height: 100%;
+    width: 100%;
+} */
+.text a {
+    /* text-decoration: none; */
+    color: rgb(250, 248, 248);
+    
+}
