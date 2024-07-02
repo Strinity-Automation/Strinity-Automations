@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Noto Sans", sans-serif;
 }
+
 body {
-    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
+
 header {
     background-color: #728b90;
     color: white;
@@ -29,21 +33,20 @@ header .logo {
     align-items: center;
     gap: 5px;
 }
-header .logo img{
+
+header .logo img {
     height: 70px;
     width: 70px;
 }
+
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    /* background-color: #333; Add a background color for visibility */
 }
 
 nav ul li {
     margin: 0 15px;
-    position: relative; /* Needed for positioning the dropdown */
+    position: relative;
 }
 
 nav ul li a {
@@ -69,12 +72,9 @@ nav ul li a {
     font-size: 1em;
 }
 
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-
 
 .hero {
     position: relative;
@@ -107,10 +107,12 @@ nav ul li a {
     border-radius: 10px;
     animation: fadeIn 2s ease-in-out;
 }
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
 .hero h1 {
     margin: 0;
     font-size: 3em;
@@ -120,8 +122,8 @@ nav ul li a {
     font-size: 1.5em;
     margin-top: 10px;
 }
+
 .btn {
-   
     display: inline-block;
     padding: 10px 20px;
     background-color: #333;
@@ -145,29 +147,35 @@ nav ul li a {
 .about {
     text-align: left;
 }
-.about h2{
+
+.about h2 {
     font-size: 30px;
 }
-.about p{
+
+.about p {
     font-size: 18px;
 }
-.products{
-    /* background-color: #efb256;*/
+
+.products {
     background-color: #f4f4f4;
-    }
-.products .box{
+}
+
+.products .box {
     margin-top: 70px;
     margin-left: 500px;
 }
-.products h2{
+
+.products h2 {
     text-align: left;
-    font-size:30px ;
+    font-size: 30px;
     color: #181616;
 }
+
 .card-container {
     display: flex;
     justify-content: center;
     animation: fadeInUp 1s ease-in-out;
+    flex-wrap: wrap; /* Added for wrapping on small screens */
 }
 
 @keyframes fadeInUp {
@@ -201,55 +209,28 @@ nav ul li a {
 .card p {
     padding: 0 15px 15px;
 }
+
 footer {
     background: #f4f4f4;
-    color: #fff;
+    color: #333;
     text-align: center;
     padding: 10px 0;
     position: relative;
     width: 100%;
 }
-footer h2{
+
+footer h2 {
     font-weight: 900;
     color: #181616;
-    font-family: "Noto Sans", sans-serif;
-    /* font-size: 900px; */
-}
-/* .contactus {
-    display: grid;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: repeat(2,300px);
-    /* gap: 10px; Optional: adds space between grid items 
-   
-    margin-top: 40px;
-    margin-left: 300px;
 }
 
-.contactus .img, .contactus .text {
-    background-color: #f0f0f0; Optional: for better visibility
-    padding: 10px;
-    text-align: center;
-}
-
-.contactus .img img {
-    max-width: 100%;
-    height: 100%;
-    display: block;
-    margin: 0 auto;
- }  */
- .contactus {
+.contactus {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 1fr ensures columns take equal space */
-    grid-gap: 20px; /* Adds space between grid items */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
     padding: 20px;
-    margin: 0 auto; /* Centers the grid container */
-    max-width: 1000px; /* Ensures the container does not exceed a certain width */
-}
-
- .contactus .text {
-    padding: 10px;
-    text-align: center;
-    background-color: #7f9fa4; /* Ensure both have the same background for consistency */
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .contactus .img img {
@@ -259,25 +240,75 @@ footer h2{
     margin: 0 auto;
 }
 
-.text {
+.contactus .text {
+    padding: 10px;
+    text-align: center;
+    background-color: #7f9fa4;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center the content */
+    justify-content: center;
 }
 
-footer p{
-    color: black;
-    font-family: "Noto-Sans",sans-serif;
-}
-/* .text{
-    margin-top: 90px;
-    color: black;
-    background-color: #daf1f5;
-    height: 100%;
-    width: 100%;
-} */
 .text a {
-    /* text-decoration: none; */
-    color: rgb(250, 248, 248);
-    
+    color: white;
+}
+
+footer p {
+    color: black;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    nav{
+        background-color: #728b90;
+    }
+    nav ul {
+        flex-direction: column;
+        background-color: #728b90;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        font-size: 0.8em;
+    }
+
+    .card-container {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: calc(50% - 40px);
+    }
+
+    .about,
+    .products,
+    .contact {
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactus {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .three {
+        width: 87.58px;
+        height: 87.58px;
+    }
+
+    .text {
+        width: 100%;
+    }
 }
