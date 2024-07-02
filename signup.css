@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +12,9 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #000 url("./assests/room.jpg") center/cover;
+  width: 100%;
   padding: 0 10px;
+  background: #000 url("./assests/room.jpg") center/cover;
 }
 
 .wrapper {
@@ -64,8 +67,8 @@ h2 {
   border-bottom: 2px solid #ccc;
 }
 
-.input-field input:focus~label,
-.input-field input:valid~label {
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
   font-size: 0.8rem;
   top: 10px;
   transform: translateY(-120%);
@@ -88,7 +91,7 @@ h2 {
   align-items: center;
 }
 
-.forget label span {
+.forget label p {
   margin-left: 8px;
 }
 
